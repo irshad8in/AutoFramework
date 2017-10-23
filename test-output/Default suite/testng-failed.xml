@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.jivesoftware.selenium.pagefactory.framework.CreateWebBrowserTests">
+      <class name="com.ecommerce.selenium.pagefactory.framework.CreateWebBrowserTests">
         <methods>
           <include name="openGoogleChrome"/>
         </methods>
-      </class> <!-- com.jivesoftware.selenium.pagefactory.framework.CreateWebBrowserTests -->
+      </class> <!-- com.ecommerce.selenium.pagefactory.framework.CreateWebBrowserTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
