@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.ecommerce.selenium.pagefactory.framework.CreateWebBrowserTests">
+      <class name="com.ecommerce.selenium.pagefactory.framework.OrderFlow">
         <methods>
-          <include name="openGoogleChrome"/>
+          <include name="PlaceOrder"/>
         </methods>
-      </class> <!-- com.ecommerce.selenium.pagefactory.framework.CreateWebBrowserTests -->
+      </class> <!-- com.ecommerce.selenium.pagefactory.framework.OrderFlow -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

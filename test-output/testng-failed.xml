@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite name="Failed suite [Ecommerce test run]">
+  <test name="Place Order(failed)">
     <classes>
-      <class name="com.ecommerce.selenium.pagefactory.framework.CreateWebBrowserTests">
+      <class name="com.ecommerce.selenium.pagefactory.framework.OrderFlow">
         <methods>
-          <include name="openGoogleChrome"/>
+          <include name="PlaceOrder"/>
         </methods>
-      </class> <!-- com.ecommerce.selenium.pagefactory.framework.CreateWebBrowserTests -->
+      </class> <!-- com.ecommerce.selenium.pagefactory.framework.OrderFlow -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Place Order(failed) -->
+</suite> <!-- Failed suite [Ecommerce test run] -->
