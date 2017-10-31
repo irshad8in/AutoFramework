@@ -1,0 +1,7 @@
+<suite name="Ecommerce test run">
+  <test name="Place Order">
+    <classes>
+      <class name="com.ecommerce.selenium.pagefactory.framework.OrderFlow"/>
+    </classes>
+  </test>
+</suite>
