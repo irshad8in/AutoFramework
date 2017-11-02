@@ -43,5 +43,18 @@ public class HomePage  {
     	
     }
     
+  
+    public void Logout(WebBrowser app) throws Exception {
+    	try {
+    		app.getActions().click(By.linkText("Logout"), TimeoutType.DEFAULT);
+    		System.out.println("Clicked Logout link Successfully.");
+    	}catch(Exception e) {
+    		System.out.println("Unable to click Logout link : "+e.getMessage());
+    		except = "true";
+    		Assert.assertEquals(except,true,"Unable to click Logout link, Reason: "+e.getMessage());		
+    	}
+    	
+    }
+    
     
 }
