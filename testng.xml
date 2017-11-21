@@ -1,5 +1,5 @@
-<suite name="Ecommerce test run">
-  <test name="Place Order">
+<suite name="Ecommerce test run" parallel="methods" thread-count="3">
+  <test name="Place Order" group-by-instances="true">
     <classes>
       <class name="com.ecommerce.selenium.pagefactory.framework.OrderFlow"/>
     </classes>

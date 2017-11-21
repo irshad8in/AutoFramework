@@ -17,53 +17,77 @@ public class OrderFlow extends Wrapper{
 	Wrapper wp = new Wrapper();
 	HomePage hp= new HomePage();
 	ConfirmOrderPage cop = new ConfirmOrderPage();
-	public WebBrowser app;
+	//public WebBrowser app;
 	
 	
-	@BeforeTest
-	public void Openapp() throws Exception {
+	//@BeforeTest
+	/*public void Openapp() throws Exception {
     	app = openApplication();
     	Thread.sleep(3000);
     	
     }
-		@BeforeMethod   
+		//@BeforeMethod   
 	    public void Login() throws Exception {
 	    	wp.login(app);
 			Thread.sleep(3000);
 			
-		}
+		}*/
 			   
 		    @Test(priority=1)
 			public void Addtocart() throws Exception {
-		    	
+		    	WebBrowser app;
+		    	app = openApplication();
+		    	Thread.sleep(3000);
+		    	wp.login(app);
+				Thread.sleep(3000);
 				hp.Addtocart(app);
 				Thread.sleep(3000);
+				hp.Logout(app);
+				app.quit();
 				
 			}
 			
 		    @Test(priority=2)
 			public void Checkoutcart() throws Exception {
-		    	Addtocart();
+		    	WebBrowser app;
+		    	app = openApplication();
+		    	Thread.sleep(3000);
+		    	wp.login(app);
+				Thread.sleep(3000);
+		    	hp.Addtocart(app);
+				Thread.sleep(3000);
 				hp.Checkoutcart(app);
 				Thread.sleep(3000);
+				hp.Logout(app);
+				app.quit();
 				
 			}
 			
 		    @Test(priority=3)
 			public void placeorder() throws Exception {
-		    	Checkoutcart();
+		    	WebBrowser app;
+		    	app = openApplication();
+		    	Thread.sleep(3000);
+		    	wp.login(app);
+				Thread.sleep(3000);
+		    	hp.Addtocart(app);
+		    	Thread.sleep(3000);
+				hp.Checkoutcart(app);
+				Thread.sleep(3000);
 				cop.PlaceOrder(app);
 				Thread.sleep(3000);
+				hp.Logout(app);
+				app.quit();
 				
 			}
-		@AfterMethod
+		/*//@AfterMethod
 		public void Logout() throws Exception {
 	    	hp.Logout(app);
 		}
-	@AfterTest
+	//@AfterTest
 	public void Closeapp() throws Exception {
     	app.quit();
-	}
+	}*/
 		
    
     	

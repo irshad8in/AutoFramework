@@ -1,13 +1,80 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head><title>TestNG Report</title><style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}</style></head><body><table><tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr><tr><th colspan="7">Ecommerce test run</th></tr><tr><td><a href="#t0">Place Order</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">149,990</td><td></td><td></td></tr></table><table><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Ecommerce test run</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Place Order &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.ecommerce.selenium.pagefactory.framework.OrderFlow</td><td><a href="#m0">PlaceOrder</a></td><td rowspan="1">1509382276882</td><td rowspan="1">149827</td></tr></tbody></table><h2>Place Order</h2><h3 id="m0">com.ecommerce.selenium.pagefactory.framework.OrderFlow#PlaceOrder</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Unable to clic OneClickPay, Reason: timeout
-  (Session info: chrome=61.0.3163.100)
-  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 81.13 seconds
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>TestNG Report</title><style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}</style></head><body><table><tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr><tr><th colspan="7">Ecommerce test run</th></tr><tr><td><a href="#t0">Place Order</a></td><td class="num">0</td><td class="num attn">3</td><td class="num">0</td><td class="num">1,616</td><td></td><td></td></tr></table><table><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Ecommerce test run</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Place Order &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.ecommerce.selenium.pagefactory.framework.OrderFlow</td><td><a href="#m0">Openapp</a></td><td rowspan="1">1511182983509</td><td rowspan="1">0</td></tr><tr><th colspan="4">Place Order &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="7">com.ecommerce.selenium.pagefactory.framework.OrderFlow</td><td><a href="#m1">Closeapp</a></td><td rowspan="1">1511182985124</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m2">Login</a></td><td rowspan="3">1511182985122</td><td rowspan="3">0</td></tr><tr class="skippedeven"><td><a href="#m3">Login</a></td></tr><tr class="skippedeven"><td><a href="#m4">Login</a></td></tr><tr class="skippedeven"><td><a href="#m5">Logout</a></td><td rowspan="3">1511182985123</td><td rowspan="3">0</td></tr><tr class="skippedeven"><td><a href="#m6">Logout</a></td></tr><tr class="skippedeven"><td><a href="#m7">Logout</a></td></tr><tr><th colspan="4">Place Order &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="3">com.ecommerce.selenium.pagefactory.framework.OrderFlow</td><td><a href="#m8">Addtocart</a></td><td rowspan="1">1511182985120</td><td rowspan="1">1</td></tr><tr class="skippedeven"><td><a href="#m9">Checkoutcart</a></td><td rowspan="1">1511182985122</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m10">placeorder</a></td><td rowspan="1">1511182985123</td><td rowspan="1">0</td></tr></tbody></table><h2>Place Order</h2><h3 id="m0">com.ecommerce.selenium.pagefactory.framework.OrderFlow#Openapp</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: Unable to create new service: ChromeDriverService
+Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:07:36.161Z&apos;
+System info: host: &apos;EC2AMAZ-U6FQG05&apos;, ip: &apos;172.31.56.210&apos;, os.name: &apos;Windows Server 2016&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: driver.version: unknown
+Command duration or timeout: 928 milliseconds
 Build info: version: &apos;2.45.0&apos;, revision: &apos;5017cb8e7ca8e37638dc3091b2440b90a1d8686f&apos;, time: &apos;2015-02-27 09:10:26&apos;
-System info: host: &apos;NEWT526&apos;, ip: &apos;10.0.75.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_111&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\Shahed\AppData\Local\Temp\scoped_dir14784_20594}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: f8330e99bf48da04aed10c29ae1dcba7 expected [true] but found [true]
-	at com.ecommerce.selenium.pagefactory.framework.pages.ConfirmOrderPage.PlaceOrder(ConfirmOrderPage.java:28)
-	at com.ecommerce.selenium.pagefactory.framework.OrderFlow.PlaceOrder(OrderFlow.java:26)
-... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p></body></html>
+System info: host: &apos;NEWT526&apos;, ip: &apos;10.0.75.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:240)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:126)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:153)
+	at com.ecommerce.selenium.pagefactory.framework.browser.web.RemoteBrowser.createWebDriver(RemoteBrowser.java:66)
+	at com.ecommerce.selenium.pagefactory.framework.browser.web.WebBrowser.initializeBrowser(WebBrowser.java:91)
+	at com.ecommerce.selenium.pagefactory.framework.browser.RemoteBrowserBuilder.build(RemoteBrowserBuilder.java:192)
+	at com.ecommerce.selenium.pagefactory.framework.functions.Wrapper.createMinimalChrome(Wrapper.java:82)
+	at com.ecommerce.selenium.pagefactory.framework.functions.Wrapper.openApplication(Wrapper.java:29)
+	at com.ecommerce.selenium.pagefactory.framework.OrderFlow.Openapp(OrderFlow.java:25)
+Caused by: org.openqa.selenium.SessionNotCreatedException: Unable to create new service: ChromeDriverService
+Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:07:36.161Z&apos;
+System info: host: &apos;EC2AMAZ-U6FQG05&apos;, ip: &apos;172.31.56.210&apos;, os.name: &apos;Windows Server 2016&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: driver.version: unknown
+Build info: version: &apos;2.45.0&apos;, revision: &apos;5017cb8e7ca8e37638dc3091b2440b90a1d8686f&apos;, time: &apos;2015-02-27 09:10:26&apos;
+System info: host: &apos;NEWT526&apos;, ip: &apos;10.0.75.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.remote.server.ServicedSession$Factory.lambda$get$0(ServicedSession.java:194)
+	at org.openqa.selenium.remote.server.ServicedSession$Factory.apply(ServicedSession.java:204)
+	at org.openqa.selenium.remote.server.ActiveSessionFactory.lambda$apply$11(ActiveSessionFactory.java:167)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.stream.ReferencePipeline$11$1.accept(Unknown Source)
+	at java.util.stream.ReferencePipeline$2$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.server.ActiveSessionFactory.apply(ActiveSessionFactory.java:170)
+	at org.openqa.selenium.remote.server.NewSessionPipeline.lambda$null$1(NewSessionPipeline.java:44)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Collections$2.tryAdvance(Unknown Source)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.server.NewSessionPipeline.lambda$createNewSession$2(NewSessionPipeline.java:47)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.stream.DistinctOps$1$2.accept(Unknown Source)
+	at java.util.stream.ReferencePipeline$2$1.accept(Unknown Source)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.stream.ReferencePipeline$2$1.accept(Unknown Source)
+	at java.util.stream.Streams$StreamBuilderImpl.tryAdvance(Unknown Source)
+	at java.util.stream.Streams$ConcatSpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.server.NewSessionPipeline.createNewSession(NewSessionPipeline.java:50)
+	at org.openqa.selenium.remote.server.commandhandler.BeginSession.execute(BeginSession.java:77)
+	at org.openqa.selenium.remote.server.WebDriverServlet.lambda$handle$0(WebDriverServlet.java:240)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m1">com.ecommerce.selenium.pagefactory.framework.OrderFlow#Closeapp</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m2">com.ecommerce.selenium.pagefactory.framework.OrderFlow#Login</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m3">com.ecommerce.selenium.pagefactory.framework.OrderFlow#Login</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m4">com.ecommerce.selenium.pagefactory.framework.OrderFlow#Login</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m5">com.ecommerce.selenium.pagefactory.framework.OrderFlow#Logout</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m6">com.ecommerce.selenium.pagefactory.framework.OrderFlow#Logout</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m7">com.ecommerce.selenium.pagefactory.framework.OrderFlow#Logout</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m8">com.ecommerce.selenium.pagefactory.framework.OrderFlow#Addtocart</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m9">com.ecommerce.selenium.pagefactory.framework.OrderFlow#Checkoutcart</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m10">com.ecommerce.selenium.pagefactory.framework.OrderFlow#placeorder</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p></body></html>

@@ -1,6 +1,7 @@
 package com.ecommerce.selenium.pagefactory.framework.functions;
 
 import com.ecommerce.selenium.pagefactory.framework.browser.LocalBrowserBuilder;
+import com.ecommerce.selenium.pagefactory.framework.browser.RemoteBrowserBuilder;
 import com.ecommerce.selenium.pagefactory.framework.browser.web.WebBrowser;
 import com.ecommerce.selenium.pagefactory.framework.browser.web.WebBrowserType;
 import com.ecommerce.selenium.pagefactory.framework.config.TimeoutType;
@@ -26,6 +27,7 @@ public class Wrapper {
     
     public WebBrowser openApplication() throws Exception {
         WebBrowser chromeBrowser = createMinimalChrome();
+        
         chromeBrowser.openPageByURL("http://52.207.0.161:8084/ECommerce/");
         //chromeBrowser.openPageByURL("http://google.com");
         
@@ -75,8 +77,10 @@ public class Wrapper {
 
 
     private WebBrowser createMinimalChrome() throws JiveWebDriverException {
-        return LocalBrowserBuilder.getBuilder(WebBrowserType.CHROME, "http://google.com")
-                .withWebDriverPath("C:\\Users\\Shahed\\Downloads\\chromedriver_win32\\chromedriver.exe")
+        return RemoteBrowserBuilder.getBuilder(WebBrowserType.CHROME, "http://52.207.0.161:8084/ECommerce/", "http://52.90.134.192:4444/wd/hub")
+        		//.withWebDriverPath("C:\\Users\\Shahed\\Downloads\\chromedriver_win32\\chromedriver.exe")
+        		.withWebDriverPath("C:\\selenium\\chromedriver.exe")
+        	
                 .build();
     }
 }

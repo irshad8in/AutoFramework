@@ -44,7 +44,7 @@ public class RemoteBrowserBuilder {
     private final String seleniumHubURL;
 
     private TimeoutsConfig timeoutsConfig;
-
+    private Optional<String> webDriverPath = Optional.empty();
     private Optional<String> browserVersion = Optional.empty();
     private Optional<String> browserLocale = Optional.empty();
     private Optional<Integer> startWindowWidth = Optional.empty();
@@ -78,6 +78,10 @@ public class RemoteBrowserBuilder {
 
     public TimeoutsConfig getTimeoutsConfig() {
         return timeoutsConfig;
+    }
+    
+    public Optional<String> getWebDriverPath() {
+        return webDriverPath;
     }
 
     public Optional<String> getBrowserVersion() {
@@ -174,7 +178,7 @@ public class RemoteBrowserBuilder {
                 browser = new FirefoxBrowser(baseTestUrl, timeoutsConfig, Optional.empty(), Optional.empty(), browserVersion, browserLocale, startWindowWidth, startWindowHeight, platform);
                 break;
             case CHROME:
-                browser = new ChromeBrowser(baseTestUrl, timeoutsConfig, Optional.empty(), Optional.empty(), browserVersion, browserLocale, startWindowWidth, startWindowHeight,
+                browser = new ChromeBrowser(baseTestUrl, timeoutsConfig, webDriverPath, Optional.empty(), browserVersion, browserLocale, startWindowWidth, startWindowHeight,
                         browserLogLevel, browserLogFile, platform, options);
                 break;
             case IE:
@@ -200,6 +204,11 @@ public class RemoteBrowserBuilder {
 
     public RemoteBrowserBuilder withBrowserVersion(String browserVersion) {
         this.browserVersion = Optional.ofNullable(browserVersion);
+        return this;
+    }
+    
+    public RemoteBrowserBuilder withWebDriverPath(String pathToWebDriver) {
+        this.webDriverPath = Optional.ofNullable(pathToWebDriver);
         return this;
     }
 
@@ -244,6 +253,7 @@ public class RemoteBrowserBuilder {
                 .add("browserType", browserType)
                 .add("baseTestUrl", baseTestUrl)
                 .add("seleniumHubURL", seleniumHubURL)
+                .add("webDriverPath", webDriverPath)
                 .add("browserVersion", browserVersion)
                 .add("browserLocale", browserLocale)
                 .add("startWindowWidth", startWindowWidth)

@@ -5,7 +5,11 @@
     <classes>
       <class name="com.ecommerce.selenium.pagefactory.framework.OrderFlow">
         <methods>
-          <include name="PlaceOrder"/>
+          <include name="Login"/>
+          <include name="Openapp"/>
+          <include name="placeorder"/>
+          <include name="Logout"/>
+          <include name="Closeapp"/>
         </methods>
       </class> <!-- com.ecommerce.selenium.pagefactory.framework.OrderFlow -->
     </classes>

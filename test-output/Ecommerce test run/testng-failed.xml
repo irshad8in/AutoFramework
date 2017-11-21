@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Ecommerce test run]">
-  <test name="Place Order(failed)">
+<suite thread-count="3" name="Failed suite [Ecommerce test run]" parallel="methods">
+  <test name="Place Order(failed)" parallel="methods">
     <classes>
       <class name="com.ecommerce.selenium.pagefactory.framework.OrderFlow">
         <methods>
-          <include name="PlaceOrder"/>
+          <include name="Addtocart"/>
+          <include name="Checkoutcart"/>
+          <include name="placeorder"/>
         </methods>
       </class> <!-- com.ecommerce.selenium.pagefactory.framework.OrderFlow -->
     </classes>
