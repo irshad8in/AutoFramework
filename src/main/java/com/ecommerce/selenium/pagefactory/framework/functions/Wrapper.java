@@ -77,7 +77,7 @@ public class Wrapper {
 
 
     private WebBrowser createMinimalChrome() throws JiveWebDriverException {
-        return RemoteBrowserBuilder.getBuilder(WebBrowserType.CHROME, "http://52.207.0.161:8084/ECommerce/", "http://34.204.8.111:4444/wd/hub")
+        return RemoteBrowserBuilder.getBuilder(WebBrowserType.CHROME, "http://52.207.0.161:8084/ECommerce/", "http://34.238.244.203:4444/wd/hub")
         		//.withWebDriverPath("C:\\Users\\Shahed\\Downloads\\chromedriver_win32\\chromedriver.exe")
         		.withWebDriverPath("C:\\selenium\\chromedriver.exe")
         	
