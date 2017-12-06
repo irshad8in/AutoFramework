@@ -4,6 +4,7 @@ import com.ecommerce.selenium.pagefactory.framework.browser.mobile.AndroidMobile
 import com.ecommerce.selenium.pagefactory.framework.browser.mobile.IOSMobileBrowser;
 import com.ecommerce.selenium.pagefactory.framework.browser.mobile.MobileBrowser;
 import com.ecommerce.selenium.pagefactory.framework.browser.mobile.MobilePlatformName;
+import com.ecommerce.selenium.pagefactory.framework.browser.web.WebBrowserType;
 import com.ecommerce.selenium.pagefactory.framework.config.TimeoutsConfig;
 import com.ecommerce.selenium.pagefactory.framework.exception.JiveWebDriverException;
 import com.google.common.base.Objects;
@@ -29,7 +30,7 @@ import org.slf4j.LoggerFactory;
  */
 public class MobileBrowserBuilder {
     private static final Logger logger = LoggerFactory.getLogger(MobileBrowserBuilder.class);
-
+    
     private String baseTestUrl;
     private TimeoutsConfig timeoutsConfig;
     private String browserName;
@@ -44,6 +45,8 @@ public class MobileBrowserBuilder {
     private String automationName;
     private String version;
     private String autoLaunch;
+    private String user;
+    private String password;
     private boolean fullReset;
     private boolean touchMode;
 
@@ -54,6 +57,7 @@ public class MobileBrowserBuilder {
         this.timeoutsConfig = TimeoutsConfig.defaultTimeoutsConfig();
         this.platformName = Preconditions.checkNotNull(platformName, "You must provide a non-null platformName!");
         this.fullReset = true;
+        
 
     }
 
@@ -61,7 +65,18 @@ public class MobileBrowserBuilder {
     public String getBaseTestUrl() {
         return baseTestUrl;
     }
-
+    
+    
+    
+    
+    public String getuser() {
+        return user;
+    }
+    
+    public String getpassword() {
+        return password;
+    }
+    
     public TimeoutsConfig getTimeoutsConfig() {
         return timeoutsConfig;
     }
@@ -121,6 +136,11 @@ public class MobileBrowserBuilder {
     public boolean isFullReset() {
         return fullReset;
     }
+    
+    
+    public static MobileBrowserBuilder getBuilder(String baseTestUrl, MobilePlatformName platformName) {
+    	return new MobileBrowserBuilder(baseTestUrl, platformName);
+}
 
     /**
      * Get a MobileBrowserBuilder for Android and base URL for the webapp you are testing against.
@@ -153,16 +173,17 @@ public class MobileBrowserBuilder {
             case ANDROID:
                 browser = new AndroidMobileBrowser(baseTestUrl, browserName, platform, platformName.getPlatformName(),
                         platformVersion, deviceName, newCommandTimeout, automationName, version, autoLaunch,
-                        app, appPackage, appActivity, timeoutsConfig, touchMode, fullReset);
+                        app, user, password, appPackage, appActivity, timeoutsConfig, touchMode, fullReset );
                 break;
             case IOS:
                 browser = new IOSMobileBrowser(baseTestUrl, browserName, platform, platformName.getPlatformName(),
                         platformVersion, deviceName, newCommandTimeout, automationName, version, autoLaunch,
-                        app, fullReset, timeoutsConfig);
+                        app, user, password, fullReset, timeoutsConfig);
                 break;
             default:
                 throw new IllegalArgumentException("Only IOS and Android are currently supported!");
         }
+        
         browser.initializeBrowser();
         return browser;
     }
@@ -252,6 +273,8 @@ public class MobileBrowserBuilder {
                 .add("platformVersion", platformVersion)
                 .add("deviceName", deviceName)
                 .add("app", app)
+                .add("user", user)
+                .add("password", password)
                 .add("appPackage", appPackage)
                 .add("appActivity", appActivity)
                 .add("newCommandTimeout", newCommandTimeout)

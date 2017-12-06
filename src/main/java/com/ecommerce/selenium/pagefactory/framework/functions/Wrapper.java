@@ -1,18 +1,31 @@
 package com.ecommerce.selenium.pagefactory.framework.functions;
 
 import com.ecommerce.selenium.pagefactory.framework.browser.LocalBrowserBuilder;
+import com.ecommerce.selenium.pagefactory.framework.browser.MobileBrowserBuilder;
 import com.ecommerce.selenium.pagefactory.framework.browser.RemoteBrowserBuilder;
+import com.ecommerce.selenium.pagefactory.framework.browser.mobile.MobileBrowser;
+import com.ecommerce.selenium.pagefactory.framework.browser.mobile.MobilePlatformName;
 import com.ecommerce.selenium.pagefactory.framework.browser.web.WebBrowser;
 import com.ecommerce.selenium.pagefactory.framework.browser.web.WebBrowserType;
 import com.ecommerce.selenium.pagefactory.framework.config.TimeoutType;
+import com.ecommerce.selenium.pagefactory.framework.constants.AppConstants;
 import com.ecommerce.selenium.pagefactory.framework.exception.JiveWebDriverException;
 
+
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.ios.IOSDriver;
+
+import java.io.IOException;
+import java.net.URL;
 import java.util.logging.Logger;
 
 import org.apache.commons.logging.LogFactory;
 import org.apache.commons.logging.impl.Log4JLogger;
 import org.eclipse.jetty.util.log.Log;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 import org.testng.TestNGUtils;
 import org.testng.annotations.Test;
@@ -22,7 +35,7 @@ import org.testng.annotations.Test;
  *
  * Basic Functional tests for creating different web browsers.
  */
-public class Wrapper {
+public class Wrapper implements AppConstants {
 
     
     public WebBrowser openApplication() throws Exception {
@@ -35,6 +48,7 @@ public class Wrapper {
 
         //chromeBrowser.quit();
     }
+    
     
     public void login(WebBrowser app) throws Exception {
         String except = "false";
@@ -77,10 +91,43 @@ public class Wrapper {
 
 
     private WebBrowser createMinimalChrome() throws JiveWebDriverException {
-        return RemoteBrowserBuilder.getBuilder(WebBrowserType.CHROME, "http://52.207.0.161:8084/ECommerce/", "http://34.238.244.203:4444/wd/hub")
+        return RemoteBrowserBuilder.getBuilder(WebBrowserType.CHROME, "http://52.207.0.161:8084/ECommerce/", "http://52.90.83.97:4444/wd/hub")
         		//.withWebDriverPath("C:\\Users\\Shahed\\Downloads\\chromedriver_win32\\chromedriver.exe")
         		.withWebDriverPath("C:\\selenium\\chromedriver.exe")
         	
                 .build();
     }
+    
+    public static AppiumDriver getAppiumDriver(String OSVersion,String deviceModel,String platform,String persona ) throws IOException {
+
+    	AppiumDriver driver = null;
+		DesiredCapabilities capabilities = new DesiredCapabilities();
+		capabilities.setCapability("user", PERFECTO_USRNAME);
+		capabilities.setCapability("password", PERFECTO_PWD);
+		capabilities.setCapability("platformName", platform);
+		capabilities.setCapability("platformVersion", OSVersion);
+		capabilities.setCapability("model", deviceModel);
+		
+		capabilities.setCapability("automationName", "appium");
+		
+		
+		// One liner to set persona
+		capabilities.setCapability("windTunnelPersona", persona);
+		
+		//Creating Android Driver
+		try {
+			driver = new IOSDriver(
+					new URL("https://"+PERFECTO_URL + "/nexperience/perfectomobile/wd/hub"),capabilities);
+		} catch (Exception e) {
+			String ErrToRep = e.getMessage().substring(0, e.getMessage().indexOf("Command duration") - 1);
+			System.out.println(ErrToRep);
+			return (null);
+		}
+		return driver;
+	}
+    
+    
+    
+   
+    
 }

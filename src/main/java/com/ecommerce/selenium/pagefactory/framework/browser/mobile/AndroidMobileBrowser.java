@@ -34,13 +34,15 @@ public class AndroidMobileBrowser extends MobileBrowser {
                                 String version,
                                 String autoLaunch,
                                 String app,
+                                String user,
+                                String password,
                                 String appPackage,
                                 String appActivity,
                                 TimeoutsConfig timeouts,
                                 boolean touchMode,
                                 boolean fullReset) throws JiveWebDriverException {
         super(baseTestUrl, timeouts, browserName, platform, platformName, platformVersion, deviceName,
-                newCommandTimeout, automationName, version, autoLaunch, app, fullReset);
+                newCommandTimeout, automationName, version, autoLaunch, app, user, password, fullReset);
         this.touchMode = touchMode;
         this.appPackage = appPackage;
         this.appActivity = appActivity;
@@ -59,6 +61,8 @@ public class AndroidMobileBrowser extends MobileBrowser {
         desiredCapabilities.setCapability("version", version);
         desiredCapabilities.setCapability("autoLaunch", autoLaunch);
         desiredCapabilities.setCapability("app", app);
+        desiredCapabilities.setCapability("user", "demo@newtglobal.com");
+        desiredCapabilities.setCapability("password", "DEMO123");
         desiredCapabilities.setCapability("appPackage", appPackage);
         desiredCapabilities.setCapability("appWaitActivity", appActivity);
         desiredCapabilities.setCapability("fullReset", fullReset);
@@ -69,7 +73,7 @@ public class AndroidMobileBrowser extends MobileBrowser {
     protected AndroidDriver createWebDriver() throws JiveWebDriverException {
         try {
             printCapabilities(getDesiredCapabilities());
-            return new SwipeableWebDriver(new URL(getBaseTestUrl()), getDesiredCapabilities());
+            return new SwipeableWebDriver(new URL("https://partners.perfectomobile.com/nexperience/perfectomobile/wd/hub"), getDesiredCapabilities());
         } catch (IOException e) {
             throw new JiveWebDriverException("Error starting appium driver service", e);
         }

@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="3" name="Failed suite [Ecommerce test run]" parallel="methods">
-  <test name="Place Order(failed)" parallel="methods">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="com.ecommerce.selenium.pagefactory.framework.OrderFlow">
+      <class name="com.ecommerce.selenium.pagefactory.framework.OrderFlow_Mobile">
         <methods>
-          <include name="Addtocart"/>
-          <include name="Checkoutcart"/>
-          <include name="placeorder"/>
+          <include name="Addtocart_mob"/>
         </methods>
-      </class> <!-- com.ecommerce.selenium.pagefactory.framework.OrderFlow -->
+      </class> <!-- com.ecommerce.selenium.pagefactory.framework.OrderFlow_Mobile -->
     </classes>
-  </test> <!-- Place Order(failed) -->
-</suite> <!-- Failed suite [Ecommerce test run] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

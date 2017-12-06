@@ -3,15 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.ecommerce.selenium.pagefactory.framework.OrderFlow">
+      <class name="com.ecommerce.selenium.pagefactory.framework.OrderFlow_Mobile">
         <methods>
-          <include name="Login"/>
-          <include name="Openapp"/>
-          <include name="placeorder"/>
-          <include name="Logout"/>
-          <include name="Closeapp"/>
+          <include name="Addtocart_mob"/>
         </methods>
-      </class> <!-- com.ecommerce.selenium.pagefactory.framework.OrderFlow -->
+      </class> <!-- com.ecommerce.selenium.pagefactory.framework.OrderFlow_Mobile -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -33,10 +33,10 @@ public class IOSMobileBrowser extends MobileBrowser {
                             String version,
                             String autoLaunch,
                             String app,
-                            boolean fullReset,
+                            String user, String password, boolean fullReset,
                             TimeoutsConfig timeouts) throws JiveWebDriverException {
         super(baseTestUrl, timeouts, browserName, platform, platformName, platformVersion, deviceName,
-                newCommandTimeout, automationName, version, autoLaunch, app, fullReset);
+                newCommandTimeout, automationName, version, autoLaunch, app, user, password, fullReset);
     }
 
     @Override
@@ -52,6 +52,8 @@ public class IOSMobileBrowser extends MobileBrowser {
         desiredCapabilities.setCapability("version", version);
         desiredCapabilities.setCapability("autoLaunch", autoLaunch);
         desiredCapabilities.setCapability("app", app);
+        desiredCapabilities.setCapability("user", "demo@newtglobal.com");
+        desiredCapabilities.setCapability("password", "DEMO123");
         desiredCapabilities.setCapability("fullReset", fullReset);
         desiredCapabilities.setCapability("rotatable", "true");
         return desiredCapabilities;
@@ -60,7 +62,7 @@ public class IOSMobileBrowser extends MobileBrowser {
     protected IOSDriver createWebDriver() throws JiveWebDriverException {
         try {
             printCapabilities(getDesiredCapabilities());
-            return new IOSDriver(new URL(getBaseTestUrl()), getDesiredCapabilities());
+            return new IOSDriver(new URL("https://partners.perfectomobile.com/nexperience/perfectomobile/wd/hub"), getDesiredCapabilities());
         } catch (IOException e) {
             throw new JiveWebDriverException("Error starting appium driver service", e);
         }

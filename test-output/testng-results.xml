@@ -1,25 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" total="0" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Ecommerce test run" duration-ms="38533" started-at="2017-11-20T15:07:39Z" finished-at="2017-11-20T15:08:18Z">
+  <suite name="Ecommerce test run" duration-ms="7" started-at="2017-11-29T14:56:35Z" finished-at="2017-11-29T14:56:35Z">
     <groups>
     </groups>
-    <test name="Place Order" duration-ms="38533" started-at="2017-11-20T15:07:39Z" finished-at="2017-11-20T15:08:18Z">
-      <class name="com.ecommerce.selenium.pagefactory.framework.OrderFlow">
-        <test-method status="PASS" signature="Addtocart()[pri:0, instance:com.ecommerce.selenium.pagefactory.framework.OrderFlow@18be83e4]" name="Addtocart" duration-ms="37735" started-at="2017-11-20T20:37:40Z" finished-at="2017-11-20T20:38:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Addtocart -->
-        <test-method status="PASS" signature="placeorder()[pri:0, instance:com.ecommerce.selenium.pagefactory.framework.OrderFlow@18be83e4]" name="placeorder" duration-ms="38493" started-at="2017-11-20T20:37:40Z" finished-at="2017-11-20T20:38:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- placeorder -->
-        <test-method status="PASS" signature="Checkoutcart()[pri:0, instance:com.ecommerce.selenium.pagefactory.framework.OrderFlow@18be83e4]" name="Checkoutcart" duration-ms="30972" started-at="2017-11-20T20:37:40Z" finished-at="2017-11-20T20:38:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Checkoutcart -->
-      </class> <!-- com.ecommerce.selenium.pagefactory.framework.OrderFlow -->
+    <test name="Place Order" duration-ms="7" started-at="2017-11-29T14:56:35Z" finished-at="2017-11-29T14:56:35Z">
     </test> <!-- Place Order -->
   </suite> <!-- Ecommerce test run -->
 </testng-results>

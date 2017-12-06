@@ -49,7 +49,7 @@ public abstract class MobileBrowser extends Browser<AppiumDriver> {
                             String version,
                             String autoLaunch,
                             String app,
-                            boolean fullReset) throws JiveWebDriverException {
+                            String user, String password, boolean fullReset) throws JiveWebDriverException {
         super(baseTestUrl, timeoutsConfig);
         this.browserName = browserName;
         this.platform = platform;
