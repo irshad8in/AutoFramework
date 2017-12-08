@@ -91,7 +91,7 @@ public class Wrapper implements AppConstants {
 
 
     private WebBrowser createMinimalChrome() throws JiveWebDriverException {
-        return RemoteBrowserBuilder.getBuilder(WebBrowserType.CHROME, "http://52.207.0.161:8084/ECommerce/", "http://52.90.83.97:4444/wd/hub")
+        return RemoteBrowserBuilder.getBuilder(WebBrowserType.CHROME, "http://52.207.0.161:8084/ECommerce/", "http://52.91.204.22:4444/wd/hub")
         		//.withWebDriverPath("C:\\Users\\Shahed\\Downloads\\chromedriver_win32\\chromedriver.exe")
         		.withWebDriverPath("C:\\selenium\\chromedriver.exe")
         	
