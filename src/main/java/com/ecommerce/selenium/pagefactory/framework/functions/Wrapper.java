@@ -24,9 +24,13 @@ import org.apache.commons.logging.LogFactory;
 import org.apache.commons.logging.impl.Log4JLogger;
 import org.eclipse.jetty.util.log.Log;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.TestNGUtils;
 import org.testng.annotations.Test;
 
@@ -41,7 +45,7 @@ public class Wrapper implements AppConstants {
     public WebBrowser openApplication() throws Exception {
         WebBrowser chromeBrowser = createMinimalChrome();
         
-        chromeBrowser.openPageByURL("http://52.207.0.161:8084/ECommerce/");
+        chromeBrowser.openPageByURL("http://34.233.43.169:8084/ECommerce/");
         //chromeBrowser.openPageByURL("http://google.com");
         
 		return chromeBrowser;
@@ -54,6 +58,7 @@ public class Wrapper implements AppConstants {
         String except = "false";
     	
     	try {
+    		
     		app.getActions().verifyElementVisible(By.id("username"), TimeoutType.DEFAULT);
     		System.out.println("Login page loaded Sucessfully");
     	}catch(Exception e){
@@ -124,6 +129,21 @@ public class Wrapper implements AppConstants {
 			return (null);
 		}
 		return driver;
+	}
+    
+    public boolean waitForElement(WebDriver app,By objPath) throws Exception{
+		try{
+			WebDriverWait wait = new WebDriverWait(app, 30);
+    		wait.until(ExpectedConditions.visibilityOfElementLocated(objPath));
+    		return true;
+		}
+		catch(Exception e){
+			Reporter.log("Error occured on waiting for the element to appear  - "+ e);
+			app.quit();
+			throw new Exception ("Error occured on waiting for the element to appear  - "+ e);
+			
+            
+		}
 	}
     
     
