@@ -3,11 +3,12 @@
 <suite thread-count="3" name="Failed suite [Ecommerce test run]" parallel="methods">
   <test name="Place Order(failed)" parallel="methods">
     <classes>
-      <class name="com.ecommerce.selenium.pagefactory.framework.OrderFlow_Mobile">
+      <class name="com.ecommerce.selenium.pagefactory.framework.BroadLeaf_DesktopFlow">
         <methods>
-          <include name="Addtocart_mob"/>
+          <include name="Checkoutcart"/>
+          <include name="Addtocart"/>
         </methods>
-      </class> <!-- com.ecommerce.selenium.pagefactory.framework.OrderFlow_Mobile -->
+      </class> <!-- com.ecommerce.selenium.pagefactory.framework.BroadLeaf_DesktopFlow -->
     </classes>
   </test> <!-- Place Order(failed) -->
 </suite> <!-- Failed suite [Ecommerce test run] -->
