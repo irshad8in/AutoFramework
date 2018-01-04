@@ -59,7 +59,7 @@ public class BroadLeaf_DesktopFlow extends Wrapper  {
 					
 				}
 				
-			   /* @Test(priority=3)
+			    @Test(priority=3)
 				public void placeorder() throws Exception {
 			    	WebBrowser app;
 			    	app = openBL_Application();
@@ -75,7 +75,7 @@ public class BroadLeaf_DesktopFlow extends Wrapper  {
 					//hp.Logout(app);
 					//app.quit();
 					
-				}*/
+				}
 			/*//@AfterMethod
 			public void Logout() throws Exception {
 		    	hp.Logout(app);

@@ -50,20 +50,31 @@ public class ConfirmOrderPage  {
     
     public void PlaceOrder_BL(WebBrowser app) throws Exception {
     	try {
+    		WebDriver driver = app.getWebDriver();
+    		driver.manage().window().maximize();
+    		Thread.sleep(2000);
+    		app.getActions().click(By.xpath("(//span[@class='circle'])[1]"), TimeoutType.DEFAULT);
     		app.getActions().inputText(By.id("fullName"), "Test");
     		app.getActions().inputText(By.id("addressLine1"), "Test");
     		app.getActions().inputText(By.id("city"), "Test");
     		app.getActions().clickAndSelectFromList(By.id("stateProvinceRegion"), By.xpath("//option[@value='CA']"));
     		app.getActions().inputText(By.id("postalCode"), "90078");
     		app.getActions().inputText(By.id("phonePrimary"), "9007817896");
-    		WebDriver driver = app.getWebDriver();
-    		WebElement radio = driver.findElement(By.xpath(""));
+    		
+    		
+    		
+    	
+    		
+    		
+    		// if the element is on bottom.
+    		//js.executeScript("scroll(0, 250)");
+    		//WebElement radio = driver.findElement(By.xpath(""));
     	   //((JavascriptExecutor)driver).executeScript("arguments[0].checked=true", radio);
     	  // WebElement element = driver.findElement(By("element_path"));
 
-    	   Actions actions = new Actions(driver);
+    	  // Actions actions = new Actions(driver);
 
-    	   actions.moveToElement(radio).click().perform();
+    	 //  actions.moveToElement(radio).click().perform();
     		//app.getActions().click(By.xpath("(//*[@id='shippingInfo']/div/div[2]/div[2]/label"), TimeoutType.TEN_SECONDS);
     		/*WebDriver driver = app.getWebDriver();
     		java.util.List<WebElement>  oRadioButton = driver.findElements(By.xpath("//*[@class='radio']"));
