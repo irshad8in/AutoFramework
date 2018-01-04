@@ -54,7 +54,7 @@ public class Wrapper implements AppConstants {
     }
     
     public WebBrowser openBL_Application() throws Exception {
-        WebBrowser chromeBrowser = testcreateMinimalChrome();
+        WebBrowser chromeBrowser = createMinimalChrome_BL();
         
         chromeBrowser.openPageByURL("https://52.207.22.180:8080/");
         //chromeBrowser.openPageByURL("http://google.com");
@@ -108,6 +108,14 @@ public class Wrapper implements AppConstants {
 
     private WebBrowser createMinimalChrome() throws JiveWebDriverException {
         return RemoteBrowserBuilder.getBuilder(WebBrowserType.CHROME, "http://52.207.0.161:8084/ECommerce/", "http://172.31.63.151:4444/wd/hub")
+        		//.withWebDriverPath("C:\\Users\\Shahed\\Downloads\\chromedriver_win32\\chromedriver.exe")
+        		.withWebDriverPath("C:\\selenium\\chromedriver.exe")
+        	
+                .build();
+    }
+    
+    private WebBrowser createMinimalChrome_BL() throws JiveWebDriverException {
+        return RemoteBrowserBuilder.getBuilder(WebBrowserType.CHROME, "https://52.207.22.180:8080/", "http://172.31.63.151:4444/wd/hub")
         		//.withWebDriverPath("C:\\Users\\Shahed\\Downloads\\chromedriver_win32\\chromedriver.exe")
         		.withWebDriverPath("C:\\selenium\\chromedriver.exe")
         	
