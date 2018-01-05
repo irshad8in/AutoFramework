@@ -7,6 +7,7 @@
         <methods>
           <include name="Checkoutcart"/>
           <include name="Addtocart"/>
+          <include name="placeorder"/>
         </methods>
       </class> <!-- com.ecommerce.selenium.pagefactory.framework.BroadLeaf_DesktopFlow -->
     </classes>

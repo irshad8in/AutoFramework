@@ -54,8 +54,9 @@ public class Wrapper implements AppConstants {
     }
     
     public WebBrowser openBL_Application() throws Exception {
-        WebBrowser chromeBrowser = createMinimalChrome_BL();
-        
+       // WebBrowser chromeBrowser = testcreateMinimalChrome();
+    	WebBrowser chromeBrowser = createMinimalChrome_BL();
+    	
         chromeBrowser.openPageByURL("https://52.207.22.180:8080/");
         //chromeBrowser.openPageByURL("http://google.com");
         

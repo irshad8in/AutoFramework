@@ -73,7 +73,7 @@ public class BroadLeaf_DesktopFlow extends Wrapper  {
 					cop.PlaceOrder_BL(app);
 					Thread.sleep(3000);
 					//hp.Logout(app);
-					//app.quit();
+					app.quit();
 					
 				}
 			/*//@AfterMethod
