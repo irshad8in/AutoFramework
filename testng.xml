@@ -2,7 +2,7 @@
 	
   <test name="Place Order" group-by-instances="true">
     <classes>
-      <class name="com.ecommerce.selenium.pagefactory.framework.BroadLeaf_DesktopFlow"/>
+      <class name="com.ecommerce.selenium.pagefactory.framework.OrderFlow_Desktop"/>
     </classes>
   </test>
 </suite>

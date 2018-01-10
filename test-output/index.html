@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Ecommerce_test_run">
-              <span class="suite-name border-passed">Ecommerce test run</span>
+              <span class="suite-name border-failed">Ecommerce test run</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,31 +90,31 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">3 methods, 3 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Ecommerce_test_run" class="hide-methods passed suite-Ecommerce_test_run"> (hide)</a> <!-- hide-methods passed suite-Ecommerce_test_run -->
-                      <a href="#" panel-name="suite-Ecommerce_test_run" class="show-methods passed suite-Ecommerce_test_run"> (show)</a> <!-- show-methods passed suite-Ecommerce_test_run -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Ecommerce_test_run" class="hide-methods failed suite-Ecommerce_test_run"> (hide)</a> <!-- hide-methods failed suite-Ecommerce_test_run -->
+                      <a href="#" panel-name="suite-Ecommerce_test_run" class="show-methods failed suite-Ecommerce_test_run"> (show)</a> <!-- show-methods failed suite-Ecommerce_test_run -->
                     </span>
-                    <div class="method-list-content passed suite-Ecommerce_test_run">
+                    <div class="method-list-content failed suite-Ecommerce_test_run">
                       <span>
-                        <img width="3%" src="passed.png"/>
+                        <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Ecommerce_test_run" title="com.ecommerce.selenium.pagefactory.framework.BroadLeaf_DesktopFlow" hash-for-method="Addtocart">Addtocart</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="passed.png"/>
+                        <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Ecommerce_test_run" title="com.ecommerce.selenium.pagefactory.framework.BroadLeaf_DesktopFlow" hash-for-method="Checkoutcart">Checkoutcart</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="passed.png"/>
+                        <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Ecommerce_test_run" title="com.ecommerce.selenium.pagefactory.framework.BroadLeaf_DesktopFlow" hash-for-method="placeorder">placeorder</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Ecommerce_test_run -->
+                    </div> <!-- method-list-content failed suite-Ecommerce_test_run -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -126,9 +126,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Ecommerce_test_run" class="panel Ecommerce_test_run">
-          <div class="suite-Ecommerce_test_run-class-passed">
+          <div class="suite-Ecommerce_test_run-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">com.ecommerce.selenium.pagefactory.framework.BroadLeaf_DesktopFlow</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -137,6 +137,53 @@
                   <a name="Addtocart">
                   </a> <!-- Addtocart -->
                   <span class="method-name">Addtocart</span>
+                  <div class="stack-trace">org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: &apos;2.45.0&apos;, revision: &apos;5017cb8e7ca8e37638dc3091b2440b90a1d8686f&apos;, time: &apos;2015-02-27 09:10:26&apos;
+System info: host: &apos;NEWT526&apos;, ip: &apos;172.27.96.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:593)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:240)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:126)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:153)
+	at com.ecommerce.selenium.pagefactory.framework.browser.web.RemoteBrowser.createWebDriver(RemoteBrowser.java:66)
+	at com.ecommerce.selenium.pagefactory.framework.browser.web.WebBrowser.initializeBrowser(WebBrowser.java:91)
+	at com.ecommerce.selenium.pagefactory.framework.browser.RemoteBrowserBuilder.build(RemoteBrowserBuilder.java:196)
+	at com.ecommerce.selenium.pagefactory.framework.functions.Wrapper.createMinimalChrome_BL(Wrapper.java:123)
+	at com.ecommerce.selenium.pagefactory.framework.functions.Wrapper.openBL_Application(Wrapper.java:58)
+	at com.ecommerce.selenium.pagefactory.framework.BroadLeaf_DesktopFlow.Addtocart(BroadLeaf_DesktopFlow.java:35)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 172.31.63.151:4444 [/172.31.63.151] failed: Connection timed out: connect
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:138)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:314)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:85)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:126)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:72)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:133)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:572)
+	... 22 more
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:118)
+	... 35 more
+... Removed 10 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -144,6 +191,53 @@
                   <a name="Checkoutcart">
                   </a> <!-- Checkoutcart -->
                   <span class="method-name">Checkoutcart</span>
+                  <div class="stack-trace">org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: &apos;2.45.0&apos;, revision: &apos;5017cb8e7ca8e37638dc3091b2440b90a1d8686f&apos;, time: &apos;2015-02-27 09:10:26&apos;
+System info: host: &apos;NEWT526&apos;, ip: &apos;172.27.96.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:593)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:240)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:126)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:153)
+	at com.ecommerce.selenium.pagefactory.framework.browser.web.RemoteBrowser.createWebDriver(RemoteBrowser.java:66)
+	at com.ecommerce.selenium.pagefactory.framework.browser.web.WebBrowser.initializeBrowser(WebBrowser.java:91)
+	at com.ecommerce.selenium.pagefactory.framework.browser.RemoteBrowserBuilder.build(RemoteBrowserBuilder.java:196)
+	at com.ecommerce.selenium.pagefactory.framework.functions.Wrapper.createMinimalChrome_BL(Wrapper.java:123)
+	at com.ecommerce.selenium.pagefactory.framework.functions.Wrapper.openBL_Application(Wrapper.java:58)
+	at com.ecommerce.selenium.pagefactory.framework.BroadLeaf_DesktopFlow.Checkoutcart(BroadLeaf_DesktopFlow.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 172.31.63.151:4444 [/172.31.63.151] failed: Connection timed out: connect
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:138)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:314)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:85)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:126)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:72)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:133)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:572)
+	... 22 more
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:118)
+	... 35 more
+... Removed 10 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -151,10 +245,57 @@
                   <a name="placeorder">
                   </a> <!-- placeorder -->
                   <span class="method-name">placeorder</span>
+                  <div class="stack-trace">org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: &apos;2.45.0&apos;, revision: &apos;5017cb8e7ca8e37638dc3091b2440b90a1d8686f&apos;, time: &apos;2015-02-27 09:10:26&apos;
+System info: host: &apos;NEWT526&apos;, ip: &apos;172.27.96.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:593)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:240)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:126)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:153)
+	at com.ecommerce.selenium.pagefactory.framework.browser.web.RemoteBrowser.createWebDriver(RemoteBrowser.java:66)
+	at com.ecommerce.selenium.pagefactory.framework.browser.web.WebBrowser.initializeBrowser(WebBrowser.java:91)
+	at com.ecommerce.selenium.pagefactory.framework.browser.RemoteBrowserBuilder.build(RemoteBrowserBuilder.java:196)
+	at com.ecommerce.selenium.pagefactory.framework.functions.Wrapper.createMinimalChrome_BL(Wrapper.java:123)
+	at com.ecommerce.selenium.pagefactory.framework.functions.Wrapper.openBL_Application(Wrapper.java:58)
+	at com.ecommerce.selenium.pagefactory.framework.BroadLeaf_DesktopFlow.placeorder(BroadLeaf_DesktopFlow.java:65)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 172.31.63.151:4444 [/172.31.63.151] failed: Connection timed out: connect
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:138)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:314)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:85)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:126)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:72)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:133)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:572)
+	... 22 more
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:118)
+	... 35 more
+... Removed 10 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Ecommerce_test_run-class-passed -->
+          </div> <!-- suite-Ecommerce_test_run-class-failed -->
         </div> <!-- panel Ecommerce_test_run -->
         <div panel-name="test-xml-Ecommerce_test_run" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -211,20 +352,20 @@ data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'placeorder')
 data.setCell(0, 2, 'com.ecommerce.selenium.pagefactory.framework.BroadLeaf_DesktopFlow')
-data.setCell(0, 3, 62612);
+data.setCell(0, 3, 21738);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'Checkoutcart')
+data.setCell(1, 1, 'Addtocart')
 data.setCell(1, 2, 'com.ecommerce.selenium.pagefactory.framework.BroadLeaf_DesktopFlow')
-data.setCell(1, 3, 45121);
+data.setCell(1, 3, 21738);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'Addtocart')
+data.setCell(2, 1, 'Checkoutcart')
 data.setCell(2, 2, 'com.ecommerce.selenium.pagefactory.framework.BroadLeaf_DesktopFlow')
-data.setCell(2, 3, 28076);
+data.setCell(2, 3, 21738);
 window.suiteTableData['Ecommerce_test_run']= { tableData: data, tableDiv: 'times-div-Ecommerce_test_run'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Ecommerce_test_run">
               </div> <!-- times-div-Ecommerce_test_run -->
             </div> <!-- times-div -->
@@ -252,14 +393,20 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.ecommerce.selenium.pagefactory.framework.BroadLeaf_DesktopFlow</div> <!-- chronological-class-name -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">Addtocart</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">Checkoutcart</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">placeorder</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
