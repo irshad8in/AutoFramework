@@ -13,7 +13,6 @@ import org.testng.Assert;
 
 import com.ecommerce.selenium.pagefactory.framework.browser.web.WebBrowser;
 import com.ecommerce.selenium.pagefactory.framework.config.TimeoutType;
-import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
 
 
 public class ConfirmOrderPage  {

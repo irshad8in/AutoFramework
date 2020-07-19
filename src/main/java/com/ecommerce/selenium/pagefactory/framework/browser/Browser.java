@@ -76,6 +76,8 @@ public abstract class Browser<D extends WebDriver> {
     public Optional<CachedPage> getOptionalCachedPage() {
         return optionalCachedPage;
     }
+    
+    
 
     /**
      * Invalidate cached page, and return a fresh TopLevelPage with newly initialized WebElements.
