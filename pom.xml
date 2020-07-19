@@ -75,7 +75,7 @@
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>18.0</version>
+            <version>24.1.1</version>
         </dependency>
 
         <dependency>
@@ -99,7 +99,7 @@
 
       
         <!-- For JSON deserialization when using the Selenium API against the Selenium HUB -->
-        <dependency>
+<!--         <dependency>
             <groupId>org.codehaus.jackson</groupId>
             <artifactId>jackson-mapper-asl</artifactId>
             <version>1.9.13</version>
@@ -110,6 +110,6 @@
             <artifactId>jackson-core-asl</artifactId>
             <version>1.9.13</version>
         </dependency>
-	</dependencies>
+	</dependencies> -->
 
 </project>
